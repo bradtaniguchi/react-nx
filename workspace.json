@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "react-chat": "apps/react-chat",
+    "react-chat-e2e": "apps/react-chat-e2e"
+  }
+}
