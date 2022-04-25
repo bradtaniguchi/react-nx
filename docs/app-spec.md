@@ -70,6 +70,7 @@ within the more familiar back-end.
 - [x] Install known client-side libraries
 - [x] Setup React libraries and routes for app.
 - [x] Build "App Shell" UI
+- [ ] Add auth0 support
 - [ ] Build `login` page
 - [ ] Build `room-list` page
   - [ ] Build `room-list` component
