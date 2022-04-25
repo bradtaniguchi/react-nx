@@ -1,27 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import { Message } from '@react-nx/api-interfaces';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { Header } from './core/Header';
+import { HeaderContext } from './core/header-context';
+import { Login } from './pages/login/Login';
+import { NotFoundPage } from './pages/not-found/NotFoundPage';
+import { RoomCreate } from './pages/room-create/room-create';
+import { RoomUsers } from './pages/room-users/RoomUsers';
+import { Room } from './pages/room/Room';
+import { Rooms } from './pages/rooms/Rooms';
+
+import './scss/app.scss';
 
 export const App = () => {
-  const [m, setMessage] = useState<Message>({ message: '' });
-
-  useEffect(() => {
-    fetch('/api')
-      .then((r) => r.json())
-      .then(setMessage);
-  }, []);
-
   return (
-    <>
-      <div style={{ textAlign: 'center' }}>
-        <h1>Welcome to react-chat!</h1>
-        <img
-          width="450"
-          src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-          alt="Nx - Smart, Fast and Extensible Build System"
-        />
-      </div>
-      <div>{m.message}</div>
-    </>
+    <HeaderContext.Provider value={undefined}>
+      {/* TODO: add oauth redirect route  */}
+      <Header></Header>
+      <Routes>
+        <Route path="/" element={<Rooms />} />
+        <Route path="/room/create " element={<RoomCreate />} />
+        <Route path="/room/:roomId" element={<Room />} />
+        <Route path="/room/:roomId/users" element={<RoomUsers />} />
+        <Route path="login" element={<Login />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </HeaderContext.Provider>
   );
 };
 

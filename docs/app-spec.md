@@ -68,8 +68,8 @@ within the more familiar back-end.
 - [x] Setup basic CI/CD pipeline to verify builds, ignore deployments
 - [x] Setup app-spec for project
 - [x] Install known client-side libraries
-- [ ] Setup React libraries and routes for app.
-- [ ] Build "App Shell" UI
+- [x] Setup React libraries and routes for app.
+- [x] Build "App Shell" UI
 - [ ] Build `login` page
 - [ ] Build `room-list` page
   - [ ] Build `room-list` component
