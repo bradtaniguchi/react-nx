@@ -9,6 +9,8 @@ import { RoomUsers } from './pages/room-users/RoomUsers';
 import { Room } from './pages/room/Room';
 import { Rooms } from './pages/rooms/Rooms';
 
+import './scss/app.scss';
+
 export const App = () => {
   return (
     <HeaderContext.Provider value={undefined}>

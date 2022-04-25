@@ -1,4 +1,4 @@
-import { AppBar, Box } from '@mui/material';
+import { AppBar, Box, Toolbar } from '@mui/material';
 import { HeaderContext } from './header-context';
 /**
  * The header is always shown at the top of screen, and can dynamically render
@@ -9,7 +9,9 @@ export const Header = () => {
     <HeaderContext.Consumer>
       {(headerContent) => (
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static">{headerContent}</AppBar>
+          <AppBar position="static">
+            <Toolbar>{headerContent}</Toolbar>
+          </AppBar>
         </Box>
       )}
     </HeaderContext.Consumer>
