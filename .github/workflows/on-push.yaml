@@ -50,9 +50,8 @@ jobs:
           folder: dist/storybook/react-chat
 
       - name: nx build-react-chat
-        run: npx nx react-chat:build:production
+        run: npx nx run react-chat:build:production
 
       - name: nx build-api
-        run: npx nx api:build:production
-      # TODO: Deploy storybook stack
+        run: npx nx run api:build:production
       # TODO: Deploy main stack
