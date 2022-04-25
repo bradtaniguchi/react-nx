@@ -40,7 +40,10 @@ jobs:
       - name: run affected:e2e
         run: npx nx affected:e2e --base=${{ github.ref }}
 
-      # TODO: Add storybook build
+      - name: run build-storybook
+        run: npx nx build-storybook
+
       - name: nx affected:build
         run: npx nx affected:build --base=${{ github.ref }}
-      # TODO: Deploy
+      # TODO: Deploy storybook stack
+      # TODO: Deploy main stack
