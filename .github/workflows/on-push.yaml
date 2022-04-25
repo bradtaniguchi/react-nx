@@ -43,7 +43,16 @@ jobs:
       - name: run build-storybook
         run: npx nx build-storybook
 
-      - name: nx affected:build
-        run: npx nx affected:build --base=${{ github.ref }}
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.3.0
+        with:
+          branch: gh-pages
+          folder: dist/storybook/react-chat
+
+      - name: nx build-react-chat
+        run: npx nx build:react-chat:production
+
+      - name: nx build-api
+        run: npx nx build:api:production
       # TODO: Deploy storybook stack
       # TODO: Deploy main stack
