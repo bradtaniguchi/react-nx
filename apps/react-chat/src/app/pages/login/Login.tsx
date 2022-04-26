@@ -1,8 +1,6 @@
 import { Card, Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import { LoginButton } from '../../core/auth/LoginButton';
-import LogoutButton from '../../core/auth/LogoutButton';
-
 import './Login.scss';
 
 export const Login = () => {
@@ -28,10 +26,6 @@ export const Login = () => {
 
               <div>
                 <LoginButton></LoginButton>
-              </div>
-
-              <div>
-                <LogoutButton></LogoutButton>
               </div>
             </div>
           </Card>
