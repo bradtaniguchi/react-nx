@@ -8,7 +8,7 @@ import { RoomCreate } from './pages/room-create/room-create';
 import { RoomUsers } from './pages/room-users/RoomUsers';
 import { Room } from './pages/room/Room';
 import { Rooms } from './pages/rooms/Rooms';
-
+import User from './pages/user/User';
 import './scss/app.scss';
 
 export const App = () => {
@@ -21,7 +21,8 @@ export const App = () => {
         <Route path="/room/create " element={<RoomCreate />} />
         <Route path="/room/:roomId" element={<Room />} />
         <Route path="/room/:roomId/users" element={<RoomUsers />} />
-        <Route path="login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/user" element={<User />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </HeaderContext.Provider>
