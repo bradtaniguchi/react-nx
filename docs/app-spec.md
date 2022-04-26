@@ -70,8 +70,9 @@ within the more familiar back-end.
 - [x] Install known client-side libraries
 - [x] Setup React libraries and routes for app.
 - [x] Build "App Shell" UI
-- [ ] Add auth0 support
-- [ ] Build `login` page
+- [x] Add auth0 support
+- [x] Build `login` page
+  - [ ] Improve `login` page responsiveness and design (see MUI)
 - [ ] Build `room-list` page
   - [ ] Build `room-list` component
   - [ ] Build `room-list-search` component
