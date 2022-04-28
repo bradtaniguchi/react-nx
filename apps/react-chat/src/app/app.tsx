@@ -13,17 +13,22 @@ import User from './pages/user/User';
 import './scss/app.scss';
 
 export const App = () => {
-  const { isLoading, isAuthenticated, error } = useAuth0();
+  const { isLoading, isAuthenticated } = useAuth0();
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    if (error) console.log('auth state error', error);
-  }, [error]);
+  // TODO: this still errors out but I'm not sure why
+  // useEffect(() => {
+  //   if (error) console.log('auth state error', error);
+  // }, [error, isAuthenticated]);
 
   useEffect(() => console.log('pathname:', pathname), [pathname]);
 
   if (isLoading) {
     return <div>Loading spinner!</div>;
+  }
+
+  if (pathname === '/login' && isAuthenticated) {
+    return <Navigate to="/" />;
   }
 
   if (pathname !== '/login' && !isAuthenticated) {
