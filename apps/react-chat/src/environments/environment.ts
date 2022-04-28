@@ -3,4 +3,5 @@
 
 export const environment = {
   production: false,
+  auth0RedirectUri: 'http://localhost:4200/',
 };
