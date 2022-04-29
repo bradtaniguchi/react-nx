@@ -1,12 +1,12 @@
 import { Story, Meta } from '@storybook/react';
-import { App } from './app';
+import { User } from './User';
 
 export default {
-  component: App,
-  title: 'App',
+  component: User,
+  title: 'react-chat/pages/User',
 } as Meta;
 
-const Template: Story = (args) => <App {...args} />;
+const Template: Story = (args) => <User {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {};

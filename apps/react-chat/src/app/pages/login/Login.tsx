@@ -23,7 +23,6 @@ export const Login = () => {
           <Card>
             <div className="column">
               <h1>Login page</h1>
-
               <div>
                 <LoginButton></LoginButton>
               </div>
