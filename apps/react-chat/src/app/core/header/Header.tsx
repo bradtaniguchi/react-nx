@@ -9,7 +9,7 @@ export const Header = () => {
     <HeaderContext.Consumer>
       {(headerContent) => (
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static">
+          <AppBar position="static" elevation={0} style={{ maxHeight: '64px' }}>
             <Toolbar>{headerContent}</Toolbar>
           </AppBar>
         </Box>
