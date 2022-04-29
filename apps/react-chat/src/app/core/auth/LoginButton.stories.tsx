@@ -3,7 +3,7 @@ import { LoginButton } from './LoginButton';
 
 export default {
   component: LoginButton,
-  title: 'react-chat/core/LoginButton',
+  title: 'react-chat/core/auth/LoginButton',
 } as Meta;
 
 const Template: Story = (args) => <LoginButton {...args} />;

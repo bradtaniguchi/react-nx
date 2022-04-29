@@ -1,8 +1,8 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import React, { useEffect } from 'react';
 import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
-import { Header } from './core/Header';
-import { HeaderContext } from './core/header-context';
+import { Header } from './core/header/Header';
+import { HeaderContext } from './core/header/header-context';
 import { Login } from './pages/login/Login';
 import { NotFoundPage } from './pages/not-found/NotFoundPage';
 import { RoomCreate } from './pages/room-create/room-create';
