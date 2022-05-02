@@ -1,14 +1,31 @@
-import { Story, Meta } from '@storybook/react';
+import { CssBaseline } from '@mui/material';
+import { Title, Stories } from '@storybook/addon-docs';
+import { Meta, Story } from '@storybook/react';
 import { Header } from './Header';
 import { HeaderContext } from './header-context';
 
 export default {
   component: Header,
   title: 'react-chat/core/Header',
-  parameters: { notes: '#test!' },
+  parameters: {
+    docs: {
+      page: () => (
+        <>
+          <Title />
+          <CssBaseline>
+            <Stories />
+          </CssBaseline>
+        </>
+      ),
+    },
+  },
 } as Meta;
 
-const Template: Story = (args) => <Header {...args} />;
+const Template: Story = (args) => (
+  <CssBaseline>
+    <Header {...args} />
+  </CssBaseline>
+);
 
 // Stories:
 // 1. Empty
@@ -32,7 +49,6 @@ RoomsHeader.decorators = [
     </HeaderContext.Provider>
   ),
 ];
-
 
 export const RoomHeader = Template.bind({});
 RoomHeader.decorators = [

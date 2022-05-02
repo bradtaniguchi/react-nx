@@ -1,5 +1,6 @@
 import { AppBar, Box, Toolbar } from '@mui/material';
 import { HeaderContext } from './header-context';
+import { Story } from '@storybook/addon-docs';
 /**
  * The header is always shown at the top of screen, and can dynamically render
  * different components depending on HeaderContext
@@ -17,3 +18,5 @@ export const Header = () => {
     </HeaderContext.Consumer>
   );
 };
+
+<Story name="test!" />;
